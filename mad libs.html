@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+
+</head>
+
+<style>
+body {
+    background-color: #99fff0;
+}
+div {
+    font-family: verdana;
+    font-size: 20px;
+}
+h1 {
+    color: #004d41;
+    text-align: center;
+    font-family: verdana;
+    background-color: #00ffd9;
+}
+</style>
+
+<body>
+
+<h1>
+ Mad Libs
+</h1>
+
+<div id = "d">
+Write a word in each box and then hit Submit to read a fun story!
+</div>
+
+<div id = "d1">
+  <input type="text" name="baseinput" id="t1">
+  (noun)
+</div>
+
+<div id = "d2">
+  <input type="text" name="baseinput" id="t2">
+  (adjective)
+</div>
+
+<div id = "d3">
+  <input type="text" name="baseinput" id="t3">
+  (noun)
+</div>
+
+<div id = "d4">
+  <input type="text" name="baseinput" id="t4">
+  (male name)
+</div>
+
+<div id = "d5">
+  <input type="text" name="baseinput" id="t5">
+  (noun)
+</div>
+
+<div id = "d6">
+  <input type="text" name="baseinput" id="t6">
+  (plural food)
+</div>
+
+<div id = "d7">
+  <input type="text" name="baseinput" id="t7">
+  (unit of time)
+</div>
+
+<div id = "d8">
+  <input type="text" name="baseinput" id="t8">
+  (verb)
+</div>
+
+<div id = "d9">
+  <input type="text" name="baseinput" id="t9">
+  (storage container)
+</div>
+
+<div id = "d10">
+  <input type="text" name="baseinput" id="t10">
+  (exclaimation)
+</div>
+
+<div id = "d11">
+  <input type="text" name="baseinput" id="t11">
+  (verb ending in "ing")
+</div>
+
+<div id = "d12">
+  <input type="text" name="baseinput" id="t12">
+  (adverb)
+</div>
+
+<div id = "d13">
+  <input type="text" name="baseinput" id="t13">
+  (number)
+</div>
+
+<div id = "d14">
+  <input type="text" name="baseinput" id="t14">
+  (number)
+</div>
+
+<div id = "d15">
+  <input type="text" name="baseinput" id="t15">
+  (adverb)
+</div>
+
+<div id = "d16">
+  <input type="text" name="baseinput" id="t16">
+  (past tense verb)
+</div>
+
+<div id = "d17">
+  <input type="button" value="Submit" onclick="getTextInput()">
+</div>
+
+<div id = "d18">
+
+</div>
+
+<script type = "text/javascript">
+
+var s1 = 'Once upon a ';
+var s2 = ', there was a ';
+var s3 = '. His name was ';
+var s4 = ' and he loved to eat ';
+var s5 = ' flavored ';
+var s6 = '. One ';
+var s7 = ', he wanted to ';
+var s8 = ' a snack, but when he looked in the ';
+var s9 = ' of ';
+var s10 = ', he realised that he had none left. "';
+var s11 = '!" ';
+var s12 = ' exclaimed, ';
+var s13 = ' as ';
+var s14 = ' as he could to the store. He bought ';
+var s15 = ' for ';
+var s16 = ' dollars. What a bargain! ';
+var s17 = ' then went home and ';
+var s18 = ' his ';
+var s19 = '. ';
+var s20 = 'The End.';
+
+function getTextInput(){
+  document.getElementById("d18").innerHTML += s1;
+  var input1 = document.getElementById("t1").value;
+  document.getElementById("d18").innerHTML += input1;
+  document.getElementById("d18").innerHTML += s2;
+  var input2 = document.getElementById("t2").value;
+  document.getElementById("d18").innerHTML += input2 + " ";
+  var input3 = document.getElementById("t3").value;
+  document.getElementById("d18").innerHTML += input3;
+  document.getElementById("d18").innerHTML += s3;
+  var input4 = document.getElementById("t4").value;
+  document.getElementById("d18").innerHTML += input4;
+  document.getElementById("d18").innerHTML += s4;
+  var input5 = document.getElementById("t5").value;
+  document.getElementById("d18").innerHTML += input5;
+  document.getElementById("d18").innerHTML += s5;
+  var input6 = document.getElementById("t6").value;
+  document.getElementById("d18").innerHTML += input6;
+  document.getElementById("d18").innerHTML += s6;
+  var input7 = document.getElementById("t7").value;
+  document.getElementById("d18").innerHTML += input7;
+  document.getElementById("d18").innerHTML += s7;
+  var input8 = document.getElementById("t8").value;
+  document.getElementById("d18").innerHTML += input8;
+  document.getElementById("d18").innerHTML += s8;
+  var input9 = document.getElementById("t9").value;
+  document.getElementById("d18").innerHTML += input9;
+  document.getElementById("d18").innerHTML += s9;
+  document.getElementById("d18").innerHTML += input5 + " ";
+  document.getElementById("d18").innerHTML += input6;
+  document.getElementById("d18").innerHTML += s10;
+  var input10 = document.getElementById("t10").value;
+  document.getElementById("d18").innerHTML += input10;
+  document.getElementById("d18").innerHTML += s11;
+  document.getElementById("d18").innerHTML += input4;
+  document.getElementById("d18").innerHTML += s12;
+  var input11 = document.getElementById("t11").value;
+  document.getElementById("d18").innerHTML += input11;
+  document.getElementById("d18").innerHTML += s13;
+  var input12 = document.getElementById("t12").value;
+  document.getElementById("d18").innerHTML += input12;
+  document.getElementById("d18").innerHTML += s14;
+  var input13 = document.getElementById("t13").value;
+  document.getElementById("d18").innerHTML += input13 + " ";
+  document.getElementById("d18").innerHTML += input5 + " ";
+  document.getElementById("d18").innerHTML += input6;
+  document.getElementById("d18").innerHTML += s15;
+  var input14 = document.getElementById("t14").value;
+  document.getElementById("d18").innerHTML += input14;
+  document.getElementById("d18").innerHTML += s16;
+  document.getElementById("d18").innerHTML += input4;
+  document.getElementById("d18").innerHTML += s17;
+  var input15 = document.getElementById("t15").value;
+  document.getElementById("d18").innerHTML += input15;
+  document.getElementById("d18").innerHTML += s18;
+  var input16 = document.getElementById("t16").value;
+  document.getElementById("d18").innerHTML += input16 + " ";
+  document.getElementById("d18").innerHTML += s19;
+  document.getElementById("d18").innerHTML += input5 + " ";
+  document.getElementById("d18").innerHTML += input6;
+  document.getElementById("d18").innerHTML += s20;
+}
+
+function story1(){
+
+    var x = "I like";
+    var q = " ";
+
+    return x+q+d+" and "+s+"! ";
+  }
+
+  result = story1("dragons","stuff");
+
+   document.getElementById('myDiv4').innerHTML += result;
+
+
+
+</script>
+
+</body>
+
+</html>
