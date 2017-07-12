@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example</title>
+
+</head>
+
+<body>
+
+<div id = "myDiv">
+  Type something in the box and click "Submit", and Kitten will repeat it!
+  <input type="text" name="baseinput" id="myText">
+  <input type="button" value="Submit" onclick="getTextInput()">
+  <input type="button" value="Say hi to Kitten" onclick="greetings()">
+</div>
+
+<div id = "myDiv2p5">
+./\____/\
+
+</div>
+
+<div id = "myDiv2">
+(=^w^=) Kitten says:
+</div>
+
+<div id = "myDiv3">
+
+
+</div>
+
+<div id = "myDiv4">
+
+
+</div>
+
+<script type = "text/javascript">
+
+function getTextInput(){
+  var input = document.getElementById("myText").value;
+  document.getElementById("myDiv2").innerHTML += "<br />" + input;
+
+}
+
+
+function greetings(){
+document.getElementById('myDiv2').innerHTML += "<br />" + "helloooo~";
+}
+
+
+ var result;
+
+  function getResultString(d, s){
+
+    var x = "I like";
+    var q = " ";
+
+    return x+q+d+" and "+s+"! ";
+  }
+function unusedText(){
+  result = getResultString("dragons","stuff");
+
+   document.getElementById('myDiv4').innerHTML += result;
+
+   result = getResultString("cats","kittens");
+
+    document.getElementById('myDiv4').innerHTML += result;
+}
+
+    function calcForm(y, z){
+     return y+z
+    }
+
+    function squareNum(ys){
+     return ys*ys
+    }
+
+    function calcFormSquare(yo, zf){
+     var term1 = calcForm(yo, zf);
+     document.getElementById('myDiv4').innerHTML += squareNum(term1);
+    }
+
+
+;
+
+</script>
+
+</body>
+
+</html>
