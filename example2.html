@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example2</title>
+
+</head>
+
+<body>
+
+<div id = "myDiv">
+
+  <input type="text" name="baseinput" id="myText">
+  <input type="button" value="Submit" onclick="getInput()">
+  <input type="radio" id="r1" name="rr1">
+  <input type="radio" id="r2" name="rr1">
+  <input type="radio" id="r3" name="rr1">
+  <input type="radio" id="r4" name="rr1">
+</div>
+
+<div id = "myDiv2">
+</div>
+
+
+<script type = "text/javascript">
+
+var x = 1
+
+function getInput(){
+if(document.getElementById("r1").checked){
+  var input = document.getElementById("myText").value;
+  document.getElementById("myDiv2").innerHTML += "<br />" + input;
+  x = 2
+}
+else{
+  if(x == 2){
+    var input = document.getElementById("myText").value;
+    document.getElementById("myDiv2").innerHTML += "<br />" + "lol" + input;
+    x = 1
+  }
+  else {
+    var input = document.getElementById("myText").value;
+    document.getElementById("myDiv2").innerHTML += "<br />" + "ohok" + input;
+  }
+}
+}
+
+/*
+function greetings(){
+document.getElementById('myDiv2').innerHTML += "<br />" + "helloooo~";
+}
+
+
+ var result;
+
+  function getResultString(d, s){
+
+    var x = "I like";
+    var q = " ";
+
+    return x+q+d+" and "+s+"! ";
+  }
+function unusedText(){
+  result = getResultString("dragons","stuff");
+
+   document.getElementById('myDiv4').innerHTML += result;
+
+   result = getResultString("cats","kittens");
+
+    document.getElementById('myDiv4').innerHTML += result;
+}
+    function calcForm(y, z){
+     return y+z
+    }
+
+    function squareNum(ys){
+     return ys*ys
+    }
+
+    function calcFormSquare(yo, zf){
+     var term1 = calcForm(yo, zf);
+     document.getElementById('myDiv4').innerHTML += squareNum(term1);
+    }
+*/
+
+;
+
+</script>
+
+</body>
+
+</html>
