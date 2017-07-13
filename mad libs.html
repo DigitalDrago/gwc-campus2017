@@ -121,7 +121,7 @@ Write a word in each box and then hit Submit to read a fun story!
 
 <script type = "text/javascript">
 
-var s1 = 'Once upon a ';
+var s1 = '<br />' + 'Once upon a ';
 var s2 = ', there was a ';
 var s3 = '. His name was ';
 var s4 = ' and he loved to eat ';
@@ -142,80 +142,81 @@ var s18 = ' his ';
 var s19 = '. ';
 var s20 = 'The End.';
 
+
+
 function getTextInput(){
-  document.getElementById("d18").innerHTML += s1;
   var input1 = document.getElementById("t1").value;
+  var input2 = document.getElementById("t2").value;
+  var input3 = document.getElementById("t3").value;
+  var input4 = document.getElementById("t4").value;
+  var input5 = document.getElementById("t5").value;
+  var input6 = document.getElementById("t6").value;
+  var input7 = document.getElementById("t7").value;
+  var input8 = document.getElementById("t8").value;
+  var input9 = document.getElementById("t9").value;
+  var input10 = document.getElementById("t10").value;
+  var input11 = document.getElementById("t11").value;
+  var input12 = document.getElementById("t12").value;
+  var input13 = document.getElementById("t13").value;
+  var input14 = document.getElementById("t14").value;
+  var input15 = document.getElementById("t15").value;
+  var input16 = document.getElementById("t16").value;
+
+  if(input1 == "" || input2 == "" || input3 == "" || input4 == "" || input5 == "" || input6 == "" || input7 == "" || input8 == "" || input9 == "" || input10 == "" || input11 == "" || input12 == "" || input13 == "" ||
+  input14 == "" || input15 == "" || input16 == "")
+  {
+    document.getElementById("d18").innerHTML = "Please fill in all of the blanks to get a complete story.";
+  }
+  else{
+
+  document.getElementById("d18").innerHTML = s1;
   document.getElementById("d18").innerHTML += input1;
   document.getElementById("d18").innerHTML += s2;
-  var input2 = document.getElementById("t2").value;
   document.getElementById("d18").innerHTML += input2 + " ";
-  var input3 = document.getElementById("t3").value;
   document.getElementById("d18").innerHTML += input3;
   document.getElementById("d18").innerHTML += s3;
-  var input4 = document.getElementById("t4").value;
   document.getElementById("d18").innerHTML += input4;
   document.getElementById("d18").innerHTML += s4;
-  var input5 = document.getElementById("t5").value;
   document.getElementById("d18").innerHTML += input5;
   document.getElementById("d18").innerHTML += s5;
-  var input6 = document.getElementById("t6").value;
   document.getElementById("d18").innerHTML += input6;
   document.getElementById("d18").innerHTML += s6;
-  var input7 = document.getElementById("t7").value;
   document.getElementById("d18").innerHTML += input7;
   document.getElementById("d18").innerHTML += s7;
-  var input8 = document.getElementById("t8").value;
   document.getElementById("d18").innerHTML += input8;
   document.getElementById("d18").innerHTML += s8;
-  var input9 = document.getElementById("t9").value;
   document.getElementById("d18").innerHTML += input9;
   document.getElementById("d18").innerHTML += s9;
   document.getElementById("d18").innerHTML += input5 + " ";
   document.getElementById("d18").innerHTML += input6;
   document.getElementById("d18").innerHTML += s10;
-  var input10 = document.getElementById("t10").value;
   document.getElementById("d18").innerHTML += input10;
   document.getElementById("d18").innerHTML += s11;
   document.getElementById("d18").innerHTML += input4;
   document.getElementById("d18").innerHTML += s12;
-  var input11 = document.getElementById("t11").value;
   document.getElementById("d18").innerHTML += input11;
   document.getElementById("d18").innerHTML += s13;
-  var input12 = document.getElementById("t12").value;
   document.getElementById("d18").innerHTML += input12;
   document.getElementById("d18").innerHTML += s14;
-  var input13 = document.getElementById("t13").value;
   document.getElementById("d18").innerHTML += input13 + " ";
   document.getElementById("d18").innerHTML += input5 + " ";
   document.getElementById("d18").innerHTML += input6;
   document.getElementById("d18").innerHTML += s15;
-  var input14 = document.getElementById("t14").value;
   document.getElementById("d18").innerHTML += input14;
   document.getElementById("d18").innerHTML += s16;
   document.getElementById("d18").innerHTML += input4;
   document.getElementById("d18").innerHTML += s17;
-  var input15 = document.getElementById("t15").value;
-  document.getElementById("d18").innerHTML += input15;
+  document.getElementById("d18").innerHTML += input15 + " ";
+  document.getElementById("d18").innerHTML += input16;
   document.getElementById("d18").innerHTML += s18;
-  var input16 = document.getElementById("t16").value;
-  document.getElementById("d18").innerHTML += input16 + " ";
-  document.getElementById("d18").innerHTML += s19;
   document.getElementById("d18").innerHTML += input5 + " ";
   document.getElementById("d18").innerHTML += input6;
+  document.getElementById("d18").innerHTML += s19;
   document.getElementById("d18").innerHTML += s20;
+  }
 }
 
-function story1(){
 
-    var x = "I like";
-    var q = " ";
-
-    return x+q+d+" and "+s+"! ";
-  }
-
-  result = story1("dragons","stuff");
-
-   document.getElementById('myDiv4').innerHTML += result;
 
 
 
