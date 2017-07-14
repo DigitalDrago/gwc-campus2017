@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example4</title>
+
+</head>
+
+<body>
+
+<div id = "d1">
+  <input type="text" name="baseinput" id="myText">
+  <input type="button" value="Submit" onclick="capA()">
+</div>
+
+<div id = "d2">
+</div>
+
+
+
+<script type = "text/javascript">
+
+
+  function capA(){
+    var outString = "";
+    var inString = document.getElementById("myText").value;
+
+    for (var i=0; i<inString.length; i+=1){
+      if (inString.charAt(i)=="a"){
+        outString += "ub" + inString.charAt(i);
+      }
+      else{
+        outString += inString.charAt(i);
+      }
+    }
+    document.getElementById("d2").innerHTML += outString;
+    return outString;
+  }
+
+
+</script>
+
+</body>
+
+</html>

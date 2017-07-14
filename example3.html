@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example Quiz</title>
+</head>
+
+<body>
+
+  <div align="center" id = "d1">
+    <h1>Personality Quiz</h1>
+    <br/>
+      What is your favorite color?
+    </br>
+      <input type = "radio" name = "ColorQ1" id = "c11">
+      <label for = "c11">Blue</label>
+    </br>
+      <input type = "radio" name = "ColorQ1" id = "c12">
+      <label for = "c12">Green</label>
+    </br>
+      <input type = "radio" name = "ColorQ1" id = "c13">
+      <label for = "c13">Orange</label>
+    </br>
+    <br/>
+      What is your favorite ice cream flavor?
+    </br>
+      <input type = "radio" name = "ColorQ2" id = "c21">
+      <label for = "c21">Vanilla</label>
+    </br>
+      <input type = "radio" name = "ColorQ2" id = "c22">
+      <label for = "c22">Chocolate</label>
+    </br>
+      <input type = "radio" name = "ColorQ2" id = "c23">
+      <label for = "c23">Strawberry</label>
+    </br>
+    <br/>
+      What is your favorite movie?
+    </br>
+      <input type = "radio" name = "ColorQ3" id = "c31">
+        <label for = "c31">Terminator</label>
+    </br>
+      <input type = "radio" name = "ColorQ3" id = "c32">
+      <label for = "c32">The LEGO Movie</label>
+    </br>
+      <input type = "radio" name = "ColorQ3" id = "c33">
+      <label for = "c33">How to Train Your Dragon</label>
+
+    <br/>
+    <br/>
+
+      <input type = "button" value = "What's my personality?" name = "SB" id = "b1" onclick = "getP()">
+
+  </div>
+
+  <div align="center" id = "d2">
+
+
+
+  </div>
+
+<script type = "text/javascript">
+
+  function getP(){
+    var t1s = 0;
+    var t2s = 0;
+    var t3s = 0;
+
+    if(document.getElementById("c11").checked){
+      t1s += 1;
+    }
+    else if(document.getElementById("c12").checked){
+      t2s += 1;
+    }
+    else if(document.getElementById("c13").checked){
+      t3s += 1;
+    }
+
+    if(document.getElementById("c21").checked){
+      t1s += 1;
+    }
+    else if(document.getElementById("c22").checked){
+      t2s += 1;
+    }
+    else if(document.getElementById("c23").checked){
+      t3s += 1;
+    }
+
+    if(document.getElementById("c31").checked){
+      t1s += 1;
+    }
+    else if(document.getElementById("c32").checked){
+      t2s += 1;
+    }
+    else if(document.getElementById("c33").checked){
+      t3s += 1;
+    }
+
+    if(t1s > t2s && t1s > t3s){
+      document.getElementById("d2").innerHTML = "<br/>" + "You are Type 1";
+    }
+    else if(t2s > t1s && t2s > t3s){
+      document.getElementById("d2").innerHTML = "<br/>" + "You are Type 2";
+    }
+    else if(t3s > t2s && t3s > t1s){
+      document.getElementById("d2").innerHTML = "<br/>" + "You are Type 3";
+    }
+    else{
+      document.getElementById("d2").innerHTML = "<br/>" + "You are all Types!";
+    }
+
+  }
+
+
+</script>
+
+</body>
+
+</html>
