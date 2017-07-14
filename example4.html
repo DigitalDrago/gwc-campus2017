@@ -7,9 +7,13 @@
 
 <body>
 
+  <div align="center" id = "dhead">
+    <h1>English to Ubbi Dubbi Translator</h1>
+  </div>
+
 <div id = "d1">
   <input type="text" name="baseinput" id="myText">
-  <input type="button" value="Submit" onclick="capA()">
+  <input type="button" value="Submit" onclick="translateT()">
 </div>
 
 <div id = "d2">
@@ -20,13 +24,40 @@
 <script type = "text/javascript">
 
 
-  function capA(){
+  function translateT(){
     var outString = "";
     var inString = document.getElementById("myText").value;
-
+    outString = ""
     for (var i=0; i<inString.length; i+=1){
       if (inString.charAt(i)=="a"){
-        outString += "ub" + inString.charAt(i);
+        outString += "uba";
+      }
+      else if (inString.charAt(i)=="A"){
+        outString += "Uba";
+      }
+      else if (inString.charAt(i)=="e"){
+        outString += "ube";
+      }
+      else if (inString.charAt(i)=="E"){
+        outString += "Ube";
+      }
+      else if (inString.charAt(i)=="i"){
+        outString += "ubi";
+      }
+      else if (inString.charAt(i)=="I"){
+        outString += "Ubi";
+      }
+      else if (inString.charAt(i)=="o"){
+        outString += "ubo";
+      }
+      else if (inString.charAt(i)=="O"){
+        outString += "Ubo";
+      }
+      else if (inString.charAt(i)=="u"){
+        outString += "ubu";
+      }
+      else if (inString.charAt(i)=="U"){
+        outString += "Ubu";
       }
       else{
         outString += inString.charAt(i);
