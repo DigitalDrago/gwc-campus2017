@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personality Quiz</title>
+
+</head>
+
+<style>
+body {
+  background-image: url("background5.png");
+  background-repeat: repeat;
+}
+</style>
+
+<body>
+
+  <div align="center" id = "d1">
+    <h1>Personality Quiz</h1>
+  </div>
+
+<div id = "dn">
+  What is your name?
+    <input type="text" name="baseinput" id="myText">
+  </br>
+  </br>
+</div>
+
+<div id = "df">
+  Which of these foods do you like the most?
+</br>
+  <input type="radio" id="rftb" name="rfn">
+  <label for = "rftb">Meat</label>
+</br>
+  <input type="radio" id="rfph" name="rfn">
+  <label for = "rfph">Fruit</label>
+</br>
+  <input type="radio" id="rfrk" name="rfn">
+  <label for = "rfrk">Vegetables</label>
+</br>
+  <input type="radio" id="rfpk" name="rfn">
+  <label for = "rfpk">Anything edible!</label>
+</br>
+  <input type="radio" id="rfpd" name="rfn">
+  <label for = "rfpd">I'd rather just have a glass of water.</label>
+  </br>
+  </br>
+</div>
+
+<div id = "dt">
+  Which trait best describes you?
+</br>
+  <input type="radio" id="rtph" name="rtn">
+  <label for = "rtph">Curious</label>
+</br>
+  <input type="radio" id="rttb" name="rtn">
+  <label for = "rttb">Mischievous</label>
+</br>
+  <input type="radio" id="rtpd" name="rtn">
+  <label for = "rtpd">Shy</label>
+</br>
+  <input type="radio" id="rtpk" name="rtn">
+  <label for = "rtpk">Outgoing</label>
+</br>
+  <input type="radio" id="rtrk" name="rtn">
+  <label for = "rtrk">Careless</label>
+</br>
+</br>
+</div>
+
+<div id = "dc">
+  Pick a first color.
+</br>
+  <input type="radio" id="rcph" name="rcn">
+  <label for = "rcph"><span style="color: #bdb8e0">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rcpk" name="rcn">
+  <label for = "rcpk"><span style="color: #f8748e">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rcpd" name="rcn">
+  <label for = "rcpd"<span style="color: #28c6d7">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rcrk" name="rcn">
+  <label for = "rcrk"><span style="color: #035ea0">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rctb" name="rcn">
+  <label for = "rctb"><span style="color: #a39985">&block;&block;&block;&block;&block;</span></label>
+</br>
+</br>
+</div>
+
+<div id = "dc">
+  Pick a second color.
+</br>
+  <input type="radio" id="rsph" name="rsn">
+  <label for = "rsph"><span style="color: #f4fb84">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rspk" name="rsn">
+  <label for = "rspk"><span style="color: #d93754">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rsrk" name="rsn">
+  <label for = "rsrk"<span style="color: #2391c5">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rspd" name="rsn">
+  <label for = "rspd"><span style="color: #0560a3">&block;&block;&block;&block;&block;</span></label>
+</br>
+  <input type="radio" id="rstb" name="rsn">
+  <label for = "rstb"><span style="color: #656358">&block;&block;&block;&block;&block;</span></label>
+</br>
+</br>
+</div>
+
+<div id = "dg">
+  Which gift would you most like to recieve?
+</br>
+  <input type="radio" id="rgph" name="rgn">
+  <label for = "rgph">A lantern</label>
+</br>
+  <input type="radio" id="rgrk" name="rgn">
+  <label for = "rgrk">A big rock</label>
+</br>
+  <input type="radio" id="rgtb" name="rgn">
+  <label for = "rgtb">A ball of yarn</label>
+</br>
+  <input type="radio" id="rgpk" name="rgn">
+  <label for = "rgpk">A beachball</label>
+</br>
+  <input type="radio" id="rgpd" name="rgn">
+  <label for = "rgpd">A rubber duck</label>
+</br>
+</br>
+</div>
+
+<div id = "dp">
+  Which pet is your favorite?
+</br>
+  <input type="radio" id="rppk" name="rpn">
+  <label for = "rppk">Dog</label>
+</br>
+  <input type="radio" id="rptb" name="rpn">
+  <label for = "rptb">Cat</label>
+</br>
+  <input type="radio" id="rppd" name="rpn">
+  <label for = "rppd">Fish</label>
+</br>
+  <input type="radio" id="rpph" name="rpn">
+  <label for = "rpph">Firefly</label>
+</br>
+  <input type="radio" id="rprk" name="rpn">
+  <label for = "rprk">Pet Rock</label>
+</br>
+</br>
+</div>
+
+<div id = "dd">
+    <input type="button" value="Submit" name = "SB" id = "b1" onclick="getInput()">
+  <br/>
+</div>
+
+<div id = "de">
+
+</div>
+
+<div id = "dpic">
+  <img src="Pink_Slime_SP.png" alt="Pink_Slime_SP" style="display: none" id="picpk">
+  <img src="Tabby_Slime_SP.png" alt="Tabby_Slime_SP" style="display: none" id="pictb">
+  <img src="Phosphor_Slime_SP.png" alt="Phosphor_Slime_SP" style="display: none" id="picph">
+  <img src="Rock_Slime.png" alt="Rock_Slime" style="display: none" id="picrk">
+  <img src="Puddle_Slime_SP.png" alt="Puddle_Slime_SP" style="display: none" id="picpud">
+  <img src="Tarr.png" alt="Tarr" style="display: none" id="pictarr">
+
+</div>
+
+<script type = "text/javascript">
+
+function getInput(){
+
+  var pk = 0
+  var tb = 0
+  var ph = 0
+  var rk = 0
+  var pd = 0
+
+
+  if(document.getElementById("rfpk").checked){
+    pk += 1;
+  }
+  else if(document.getElementById("rftb").checked){
+    tb += 1;
+  }
+  else if(document.getElementById("rfph").checked){
+    ph += 1;
+  }
+  else if(document.getElementById("rfrk").checked){
+    rk += 1;
+  }
+  else if(document.getElementById("rfpd").checked){
+    pd += 1;
+  }
+
+  if(document.getElementById("rtpk").checked){
+    pk += 1;
+  }
+  else if(document.getElementById("rttb").checked){
+    tb += 1;
+  }
+  else if(document.getElementById("rtph").checked){
+    ph += 1;
+  }
+  else if(document.getElementById("rtrk").checked){
+    rk += 1;
+  }
+  else if(document.getElementById("rtpd").checked){
+    pd += 1;
+  }
+
+  if(document.getElementById("rcpk").checked){
+    pk += 1;
+  }
+  else if(document.getElementById("rctb").checked){
+    tb += 1;
+  }
+  else if(document.getElementById("rcph").checked){
+    ph += 1;
+  }
+  else if(document.getElementById("rcrk").checked){
+    rk += 1;
+  }
+  else if(document.getElementById("rcpd").checked){
+    pd += 1;
+  }
+
+  if(document.getElementById("rspk").checked){
+    pk += 1;
+  }
+  else if(document.getElementById("rstb").checked){
+    tb += 1;
+  }
+  else if(document.getElementById("rsph").checked){
+    ph += 1;
+  }
+  else if(document.getElementById("rsrk").checked){
+    rk += 1;
+  }
+  else if(document.getElementById("rspd").checked){
+    pd += 1;
+  }
+
+  if(document.getElementById("rgpk").checked){
+    pk += 1;
+  }
+  else if(document.getElementById("rgtb").checked){
+    tb += 1;
+  }
+  else if(document.getElementById("rgph").checked){
+    ph += 1;
+  }
+  else if(document.getElementById("rgrk").checked){
+    rk += 1;
+  }
+  else if(document.getElementById("rgpd").checked){
+    pd += 1;
+  }
+
+  if(document.getElementById("rppk").checked){
+    pk += 1;
+  }
+  else if(document.getElementById("rptb").checked){
+    tb += 1;
+  }
+  else if(document.getElementById("rpph").checked){
+    ph += 1;
+  }
+  else if(document.getElementById("rprk").checked){
+    rk += 1;
+  }
+  else if(document.getElementById("rppd").checked){
+    pd += 1;
+  }
+
+var input = document.getElementById("myText").value;
+
+  if(pk > tb && pk > ph && pk > rk && pk > pd){
+    document.getElementById("de").innerHTML = "<br/>" + "You are a Pink Slime, " + input + "!";
+    document.getElementById("picpk").style.display = "block";
+    document.getElementById("pictarr").style.display = "none";
+    document.getElementById("pictb").style.display = "none";
+    document.getElementById("picph").style.display = "none";
+    document.getElementById("picrk").style.display = "none";
+    document.getElementById("picpud").style.display = "none";
+  }
+  else if(tb > pk && tb > ph && tb > rk && tb > pd){
+    document.getElementById("de").innerHTML = "<br/>" + "You are a Tabby Slime, " + input + "!";
+    document.getElementById("pictb").style.display = "block";
+    document.getElementById("picpk").style.display = "none";
+    document.getElementById("pictarr").style.display = "none";
+    document.getElementById("picph").style.display = "none";
+    document.getElementById("picrk").style.display = "none";
+    document.getElementById("picpud").style.display = "none";
+  }
+  else if(ph > tb && ph > pk && ph > rk && ph > pd){
+    document.getElementById("de").innerHTML = "<br/>" + "You are a Phosphor Slime, " + input + "!";
+    document.getElementById("picph").style.display = "block";
+    document.getElementById("picpk").style.display = "none";
+    document.getElementById("pictb").style.display = "none";
+    document.getElementById("pictarr").style.display = "none";
+    document.getElementById("picrk").style.display = "none";
+    document.getElementById("picpud").style.display = "none";
+  }
+  else if(rk > tb && rk > ph && rk > pk && rk > pd){
+    document.getElementById("de").innerHTML = "<br/>" + "You are a Rock Slime, " + input + "!";
+    document.getElementById("picrk").style.display = "block";
+    document.getElementById("picpk").style.display = "none";
+    document.getElementById("pictb").style.display = "none";
+    document.getElementById("picph").style.display = "none";
+    document.getElementById("pictarr").style.display = "none";
+    document.getElementById("picpud").style.display = "none";
+  }
+  else if(pd > tb && pd > ph && pd > rk && pd > pk){
+    document.getElementById("de").innerHTML = "<br/>" + "You are a Puddle Slime, " + input + "!";
+    document.getElementById("picpud").style.display = "block";
+    document.getElementById("picpk").style.display = "none";
+    document.getElementById("pictb").style.display = "none";
+    document.getElementById("picph").style.display = "none";
+    document.getElementById("picrk").style.display = "none";
+    document.getElementById("pictarr").style.display = "none";
+  }
+  else{
+    document.getElementById("de").innerHTML = "<br/>" + "You are a Tarr, " + input + "! You are a mix of the other types of slimes.";
+    document.getElementById("pictarr").style.display = "block";
+    document.getElementById("picpk").style.display = "none";
+    document.getElementById("pictb").style.display = "none";
+    document.getElementById("picph").style.display = "none";
+    document.getElementById("picrk").style.display = "none";
+    document.getElementById("picpud").style.display = "none";
+  }
+
+}
+
+
+</script>
+
+</body>
+
+</html>
