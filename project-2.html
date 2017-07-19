@@ -6,11 +6,6 @@
 <style>
 
 img {
-	position: absolute;
-	margin-left: 4%;
-	margin-top: 0%;
-  display:block;
-  height:50%;
 }
 
 ul{
@@ -19,7 +14,12 @@ ul{
 }
 
 .base{
-	visibility:visible;
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
+	visibility:hidden;
   z-index: 0;
 }
 
@@ -78,6 +78,70 @@ ul{
   z-index: 10;
 }
 
+.dropbtnB {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtnB:hover, .dropbtnB:focus {
+    background-color: #3e8e41;
+}
+.dropdownB {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-contentB {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-contentB button {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdownB button:hover {background-color: #f1f1f1}
+.showB {display:block;}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content button {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown button:hover {background-color: #f1f1f1}
+.show {display:block;}
+
 table, th, td {
     border-collapse: collapse;
 }
@@ -98,16 +162,86 @@ th, td {
 			<img src="base-2-blue1.png" alt="base-2-blue1" class="base" id="pbb">
 			<img src="base-2-green1.png" alt="base-2-green1" class="base" id="pbg">
 
-	<div style = "border: 3px solid green; margin-left: 26%; 	margin-top: 6%;">
-        body-dropdown-here: base(buttons here) hair eyes nose mouth
-		    <button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button>
-		    <button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button>
-		    <button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button>
-		    <button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button>
-		    <button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button>
-		    <br> <br> <br> <br> <br> <br> clothes-dropdown-here: hat neck top hands waist bottom shoes <br> <br> <br> <br> <br> <br> <br>
+	<div style = "margin-left: 26%; 	margin-top: 6%;">
+        <!-- body-dropdown-here: base(buttons here) hair eyes nose mouth
+
+		    <br> <br> <br> <br> <br> <br> clothes-dropdown-here: hat neck top hands waist bottom shoes <br> -->
+
+
+				<div class="dropdownB">
+				<button onclick="myFunctionB()" class="dropbtnB">Body</button>
+				  <div id="myDropdownB" class="dropdown-contentB">
+				    <button onclick="showskin()">Skin</button>
+				    <button onclick="showhair()">Hair</button>
+				    <button onclick="showeyes()">Eyes</button>
+				    <button onclick="showmouths()">Mouths</button>
+
+				  </div>
+				</div>
+
+				<div style="border: 5px solid blue; width:200px; height:400px; display:none;"  id="skinDiv">
+					<button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button>
+					<button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button>
+					<button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button>
+					<button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button>
+					<button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button>
+				</div>
+
+				<div style="border: 5px solid brown; width:200px; height:400px; display:none;"  id="hairDiv">
+				  <img src="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=97400559" alt="W3Schools.com" style="width:50px;height:50px;">
+				  <img src="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=85784573" alt="W3Schools.com" style="width:50px;height:50px;">
+
+				</div>
+
+				<div style="border: 5px solid green; width:200px; height:400px; display:none;"  id="eyeDiv">
+				  <img src="http://designingflicks.com/images/whiteeye-clipart-9.png" alt="W3Schools.com" style="width:50px;height:50px;">
+				  <img src="http://designingflicks.com/images/white-eyes-clipart-1.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+
+				</div>
+
+				<div style="border: 5px solid red; width:200px; height:400px; display:none;"  id="mouthDiv">
+				  <img src="http://cliparting.com/wp-content/uploads/2016/12/Mouth-clipart-clip-art-free-images.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+				  <img src="https://cdn.pixabay.com/photo/2014/04/03/10/31/lips-310734_960_720.png" alt="W3Schools.com" style="width:50px;height:50px;">
+
+				</div>
+
+
+				<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">Clothes</button>
+				  <div id="myDropdown" class="dropdown-content">
+				    <button onclick="showshirts()">Shirts</button>
+				    <button onclick="showpants()">Pants</button>
+				    <button onclick="showhats()">Hats</button>
+				    <button onclick="showshoes()">Shoes</button>
+
+				  </div>
+				</div>
+
+				<div style="border: 5px solid red; width:200px; height:400px; display:none;"  id="shirtDiv">
+				  <img src="http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_2395000/ff_2395437c_full.jpg&w=340" alt="W3Schools.com" style="width:50px;height:50px;" onclick="dosomething()">
+				  <img src="http://d27ah0i12nj2vl.cloudfront.net/media/catalog/product/cache/1/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/8/9/891.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+
+				</div>
+
+				<div style="border: 5px solid green; width:200px; height:400px; display:none;"  id="pantDiv">
+				  <img src="http://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwb85953a7/images/hi-res/21970_FGE.jpg?sw=750&sh=750&sm=fit&sfrm=png" alt="W3Schools.com" style="width:50px;height:50px;">
+				  <img src="http://assets.academy.com/mgen/06/10426106.jpg?is=500,500" alt="W3Schools.com" style="width:50px;height:50px;">
+				</div>
+
+				<div style="border: 5px solid blue; width:200px; height:400px; display:none;"  id="hatDiv">
+				  <img src="http://www.villagehatshop.com/photos/product/standard/4511390S171094/all/panama-straw-c-crown-fedora-hat.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+				  <img src="https://images.footballfanatics.com/FFImage/thumb.aspx?i=/productimages/_2659000/ff_2659871_full.jpg&w=340" alt="W3Schools.com" style="width:50px;height:50px;">
+
+				</div>
+
+				<div style="border: 5px solid brown; width:200px; height:400px; display:none;"  id="shoeDiv">
+				  <img src="https://s-media-cache-ak0.pinimg.com/originals/ba/ed/d0/baedd02edbbc575faed961eab41772d0.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+				  <img src="https://s-media-cache-ak0.pinimg.com/736x/4a/fe/ab/4afeab7df54559de77d45a8fcde7841a--shoes-jordans-sneakers-shoes.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+
+				</div>
 	</div>
 
+<!-- <div style = "border: 3px solid green; margin-left: 26%; 	margin-top: 6%;"> -->
 
   <style>
   body {
@@ -123,27 +257,99 @@ th, td {
   </div> -->
 
 
-
-  <div id = "de">
-
-  </div>
-
-  <div id = "dpic">
-
-  </div>
-
-
-
-
-
-
-
-
-
-
 <script type="text/javascript">
 
 var baseA = ["pbd", "pbm", "pbl", "pbb", "pbg"];
+
+function dosomething(){
+  alert("it worked");
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunctionB() {
+    document.getElementById("myDropdownB").classList.toggle("showB");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtnB')) {
+    var dropdownsB = document.getElementsByClassName("dropdown-contentB");
+    var iB;
+    for (iB = 0; iB < dropdownsB.length; iB++) {
+      var openDropdownB = dropdownsB[iB];
+      if (openDropdownB.classList.contains('showB')) {
+        openDropdownB.classList.remove('showB');
+      }
+    }
+  }
+}
+function showskin() {
+  document.getElementById("skinDiv").style.display="block";
+  document.getElementById("hairDiv").style.display="none";
+  document.getElementById("eyeDiv").style.display="none";
+  document.getElementById("mouthDiv").style.display="none";
+}
+function showhair() {
+  document.getElementById("skinDiv").style.display="none";
+  document.getElementById("eyeDiv").style.display="none";
+  document.getElementById("mouthDiv").style.display="none";
+  document.getElementById("hairDiv").style.display="block";
+}
+function showeyes() {
+  document.getElementById("eyeDiv").style.display="block";
+  document.getElementById("skinDiv").style.display="none";
+  document.getElementById("hairDiv").style.display="none";
+  document.getElementById("mouthDiv").style.display="none";
+}
+function showmouths() {
+  document.getElementById("mouthDiv").style.display="block";
+  document.getElementById("skinDiv").style.display="none";
+  document.getElementById("hairDiv").style.display="none";
+  document.getElementById("eyeDiv").style.display="none";
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function showshirts() {
+  document.getElementById("shirtDiv").style.display="block";
+  document.getElementById("hatDiv").style.display="none";
+  document.getElementById("shoeDiv").style.display="none";
+  document.getElementById("pantDiv").style.display="none";
+}
+function showpants() {
+  document.getElementById("shirtDiv").style.display="none";
+  document.getElementById("hatDiv").style.display="none";
+  document.getElementById("shoeDiv").style.display="none";
+  document.getElementById("pantDiv").style.display="block";
+}
+function showhats() {
+  document.getElementById("hatDiv").style.display="block";
+  document.getElementById("shirtDiv").style.display="none";
+  document.getElementById("shoeDiv").style.display="none";
+  document.getElementById("pantDiv").style.display="none";
+}
+function showshoes() {
+  document.getElementById("shoeDiv").style.display="block";
+  document.getElementById("shirtDiv").style.display="none";
+  document.getElementById("hatDiv").style.display="none";
+  document.getElementById("pantDiv").style.display="none";
+}
 
 function buttonF(varA,show){
 	for (var i = 0; i < varA.length; i += 1){
