@@ -1,40 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Random Webpage</title>
+<title>Character Creator</title>
 </head>
 <style>
 
 img {
 	position: absolute;
-	margin-left: 5%;
-/*display:inline-block;*/
-display: none;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
   height:50%;
 }
 
+ul{
+	list-style-type: none;
+	display:inline-block;
+}
+
+.base{
+	visibility:visible;
+  z-index: 0;
+}
+
+.hair{
+	visibility:hidden;
+  z-index: 7;
+}
+
+.eyes{
+	visibility:hidden;
+  z-index: 6;
+}
+
+.nose{
+	visibility:hidden;
+  z-index: 5;
+}
+
+.mouth{
+	visibility:hidden;
+  z-index: 4;
+}
+
+.hat{
+	visibility:hidden;
+  z-index: 9;
+}
+
+.top{
+	visibility:hidden;
+  z-index: 3;
+}
+
+.bottom{
+	visibility:hidden;
+  z-index: 2;
+}
+
+.shoes{
+	visibility:hidden;
+  z-index: 1;
+}
+
+.neck{
+	visibility:hidden;
+  z-index: 8;
+}
+
+.waist{
+	visibility:hidden;
+  z-index: 11;
+}
+
+.hand{
+	visibility:hidden;
+  z-index: 10;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
 </style>
+
 
 <body>
 
+<h2>Character Creator</h2>
+
+			<img src="base-2-dark.png" alt="base-2-dark" class="base" id="pbd">
+			<img src="base-2-med1.png" alt="base-2-med1" class="base" id="pbm">
+			<img src="base-2-light.png" alt="base-2-light" class="base" id="pbl">
+			<img src="base-2-blue1.png" alt="base-2-blue1" class="base" id="pbb">
+			<img src="base-2-green1.png" alt="base-2-green1" class="base" id="pbg">
+
+	<div style = "border: 3px solid green; margin-left: 26%; 	margin-top: 6%;">
+        body-dropdown-here: base(buttons here) hair eyes nose mouth
+		    <button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button>
+		    <button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button>
+		    <button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button>
+		    <button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button>
+		    <button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button>
+		    <br> <br> <br> <br> <br> <br> clothes-dropdown-here: hat neck top hands waist bottom shoes <br> <br> <br> <br> <br> <br> <br>
+	</div>
+
+
+  <style>
+  body {
+          background-image: url("http://wonderworlds.org/images/raindrops/raindrops-window-bw-pale-tile.jpg");
+  }
+  </style>
+
+<!--
   <div id = "dd">
       <input type="button" value="Submit" name = "SB" id = "b1" onclick="getInput()">
       <input type="button" value="Submit2" name = "SB" id = "b2" onclick="getInput2()">
     <br/>
-  </div>
+  </div> -->
+
+
 
   <div id = "de">
 
   </div>
 
   <div id = "dpic">
-    <img src="Pink_Slime_SP.png" alt="Pink_Slime_SP" style="display: none" id="picpk">
-    <img src="Tabby_Slime_SP.png" alt="Tabby_Slime_SP" style="display: none" id="pictb">
-    <img src="Phosphor_Slime_SP.png" alt="Phosphor_Slime_SP" id="picph">
-    <img src="Rock_Slime.png" alt="Rock_Slime" style="display: none" id="picrk">
-    <img src="Puddle_Slime_SP.png" alt="Puddle_Slime_SP" style="display: none" id="picpud">
-    <img src="Tarr.png" alt="Tarr" style="display: none" id="pictarr">
-    <img id="bottom4" style="z-index: -1; display: none" class="pant" src="background1.png" />
+
   </div>
 
 
@@ -48,21 +143,80 @@ display: none;
 
 <script type="text/javascript">
 
-function getInput(){
-  document.getElementById("picpk").style.display = "block";
-  document.getElementById("pictarr").style.display = "none";
-  document.getElementById("pictb").style.display = "none";
-  document.getElementById("bottom4").style.display = "block";
-  document.getElementById("picrk").style.display = "none";
-  document.getElementById("picpud").style.display = "none";
+var baseA = ["pbd", "pbm", "pbl", "pbb", "pbg"];
+
+function buttonF(varA,show){
+	for (var i = 0; i < varA.length; i += 1){
+		document.getElementById(varA[i]).style.visibility = "hidden";
+	}
+  document.getElementById(varA[show]).style.visibility = "visible";
 }
-function getInput2(){
-  document.getElementById("pictarr").style.display = "none";
-  document.getElementById("pictb").style.display = "block";
-  document.getElementById("picph").style.display = "none";
-  document.getElementById("bottom4").style.display = "none";
-  document.getElementById("picpud").style.display = "none";
+
+function buttonf1(){
+	buttonF(baseA,2);
 }
+
+function buttonf2(){
+	buttonF(baseA,1);
+}
+
+function buttonf3(){
+	buttonF(baseA,0);
+}
+
+function buttonf4(){
+	buttonF(baseA,3);
+}
+
+function buttonf5(){
+	buttonF(baseA,4);
+}
+
+
+// $(document).ready(function(){
+//
+// function ImageSwitcher(choices, i) {
+// 	i = 0;
+//
+// 	this.Next = function() {
+// 		hide_current_image();
+// 		show_next_image();
+// 	}
+//
+// 	var hide_current_image = function() {
+// 		if(choices){
+// 			choices[i].style.visibility = "hidden";
+// 			i += 1;
+// 		}
+// 	}
+// 	var show_next_image = function() {
+// 		if(choices){
+// 			if(i == (choices.length)) {
+// 				i = 0;
+// 			}
+// 			choices[i].style.visibility = "visible";
+// 		}
+// 	}
+// }
+//
+//     var pants = $(".base");
+// 	var shirts = $(".shoes");
+// 	var backgrounds = $(".bg");
+//
+// 	var shirt_picker = new ImageSwitcher(shirts);
+// 	document.getElementById("shirt_button").onclick = function() { shirt_picker.Next(); };
+//
+// 	var pants_picker = new ImageSwitcher(pants);
+// 	document.getElementById("pant_button").onclick = function() {pants_picker.Next(); };
+//
+// 	var bg_picker = new ImageSwitcher(backgrounds);
+// 	document.getElementById("bg_button").onclick = function() {bg_picker.Next(); };
+//
+// });
+//
+//   $("#shirt_button").click(function(){
+//   $("#shirt-menu").css("visibility", "visible"); });
+
 
 
 
