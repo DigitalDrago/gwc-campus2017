@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Webpage</title>
+</head>
+<style>
+
+img {
+	position: absolute;
+	margin-left: 5%;
+/*display:inline-block;*/
+display: none;
+  height:50%;
+}
+
+</style>
+
+<body>
+
+  <div id = "dd">
+      <input type="button" value="Submit" name = "SB" id = "b1" onclick="getInput()">
+      <input type="button" value="Submit2" name = "SB" id = "b2" onclick="getInput2()">
+    <br/>
+  </div>
+
+  <div id = "de">
+
+  </div>
+
+  <div id = "dpic">
+    <img src="Pink_Slime_SP.png" alt="Pink_Slime_SP" style="display: none" id="picpk">
+    <img src="Tabby_Slime_SP.png" alt="Tabby_Slime_SP" style="display: none" id="pictb">
+    <img src="Phosphor_Slime_SP.png" alt="Phosphor_Slime_SP" id="picph">
+    <img src="Rock_Slime.png" alt="Rock_Slime" style="display: none" id="picrk">
+    <img src="Puddle_Slime_SP.png" alt="Puddle_Slime_SP" style="display: none" id="picpud">
+    <img src="Tarr.png" alt="Tarr" style="display: none" id="pictarr">
+    <img id="bottom4" style="z-index: -1; display: none" class="pant" src="background1.png" />
+  </div>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+function getInput(){
+  document.getElementById("picpk").style.display = "block";
+  document.getElementById("pictarr").style.display = "none";
+  document.getElementById("pictb").style.display = "none";
+  document.getElementById("bottom4").style.display = "block";
+  document.getElementById("picrk").style.display = "none";
+  document.getElementById("picpud").style.display = "none";
+}
+function getInput2(){
+  document.getElementById("pictarr").style.display = "none";
+  document.getElementById("pictb").style.display = "block";
+  document.getElementById("picph").style.display = "none";
+  document.getElementById("bottom4").style.display = "none";
+  document.getElementById("picpud").style.display = "none";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
