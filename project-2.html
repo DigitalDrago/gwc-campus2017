@@ -24,58 +24,120 @@ ul{
 }
 
 .hair{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 7;
 }
 
 .eyes{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 6;
 }
 
 .nose{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 5;
 }
 
 .mouth{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 4;
 }
 
 .hat{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 9;
 }
 
 .top{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 3;
 }
 
 .bottom{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 2;
 }
 
 .shoes{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 1;
 }
 
 .neck{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 8;
 }
 
 .waist{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 11;
 }
 
 .hand{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
 	visibility:hidden;
   z-index: 10;
+}
+
+.pbutton{
+	position: relative;
+  visibility: visible;
+  display:inline-block;
+  height:20%;
 }
 
 .dropbtnB {
@@ -162,7 +224,18 @@ th, td {
 			<img src="base-2-blue1.png" alt="base-2-blue1" class="base" id="pbb">
 			<img src="base-2-green1.png" alt="base-2-green1" class="base" id="pbg">
 
-	<div style = "margin-left: 26%; 	margin-top: 6%;">
+			<img src="shirt-1-red.png" alt="shirt-1-red" class="top" id="pshirt1red">
+			<img src="shirt-1-blue.png" alt="shirt-1-blue" class="top" id="pshirt1blue">
+			<img src="shirt-1-yellow.png" alt="shirt-1-yellow" class="top" id="pshirt1yellow">
+
+			<img src="pants-1-darkgrey.png" alt="pants-1-darkgrey" class="bottom" id="ppants1dgrey">
+			<img src="pants-1-darkblue.png" alt="pants-1-darkblue" class="bottom" id="ppants1dblue">
+
+			<img src="shoes-1-blue.png" alt="shoes-1-blue" class="shoes" id="pshoes1blue">
+			<img src="shoes-1-green.png" alt="shoes-1-green" class="shoes" id="pshoes1green">
+			<img src="shoes-1-grey.png" alt="shoes-1-grey" class="shoes" id="pshoes1grey">
+
+	<div style = "border: 3px solid blue; margin-left: 26%; margin-top: 6%; width: 30%; display: inline-block; position: absolute;">
         <!-- body-dropdown-here: base(buttons here) hair eyes nose mouth
 
 		    <br> <br> <br> <br> <br> <br> clothes-dropdown-here: hat neck top hands waist bottom shoes <br> -->
@@ -179,12 +252,12 @@ th, td {
 				  </div>
 				</div>
 
-				<div style="border: 5px solid blue; width:200px; height:400px; display:none;"  id="skinDiv">
-					<button class="btn btn-default" name = "SB" id = "b1" onclick="buttonf1()" type="button">Light</button>
-					<button class="btn btn-default" name = "SB" id = "b2" onclick="buttonf2()" type="button">Medium</button>
-					<button class="btn btn-default" name = "SB" id = "b3" onclick="buttonf3()" type="button">Dark</button>
-					<button class="btn btn-default" name = "SB" id = "b4" onclick="buttonf4()" type="button">Blue</button>
-					<button class="btn btn-default" name = "SB" id = "b5" onclick="buttonf5()" type="button">Green</button>
+	      <div style="border: 5px solid blue; width:200px; height:400px; display:none;"  id="skinDiv">
+					<button class="btn btn-default" name = "SB" id = "b1" onclick="baseButtonf1()" type="button">Light</button>
+					<button class="btn btn-default" name = "SB" id = "b2" onclick="baseButtonf2()" type="button">Medium</button>
+					<button class="btn btn-default" name = "SB" id = "b3" onclick="baseButtonf3()" type="button">Dark</button>
+					<button class="btn btn-default" name = "SB" id = "b4" onclick="baseButtonf4()" type="button">Blue</button>
+					<button class="btn btn-default" name = "SB" id = "b5" onclick="baseButtonf5()" type="button">Green</button>
 				</div>
 
 				<div style="border: 5px solid brown; width:200px; height:400px; display:none;"  id="hairDiv">
@@ -204,8 +277,8 @@ th, td {
 				  <img src="https://cdn.pixabay.com/photo/2014/04/03/10/31/lips-310734_960_720.png" alt="W3Schools.com" style="width:50px;height:50px;">
 
 				</div>
-
-
+</div>
+<div style = "border: 3px solid red; margin-left: 60%; margin-top: 6%; width: 30%; display: inline-block; position: absolute;">
 				<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn">Clothes</button>
 				  <div id="myDropdown" class="dropdown-content">
@@ -218,14 +291,16 @@ th, td {
 				</div>
 
 				<div style="border: 5px solid red; width:200px; height:400px; display:none;"  id="shirtDiv">
-				  <img src="http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_2395000/ff_2395437c_full.jpg&w=340" alt="W3Schools.com" style="width:50px;height:50px;" onclick="dosomething()">
-				  <img src="http://d27ah0i12nj2vl.cloudfront.net/media/catalog/product/cache/1/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/8/9/891.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+								<img src="shirt-1-red-cropped.png" alt="shirt-1-red-button" class="pbutton" id="bshirt1red" onclick="topButtonf1()">
+								<img src="shirt-1-blue-cropped.png" alt="shirt-1-blue-button" class="pbutton" id="bshirt1blue" onclick="topButtonf2()">
+								<img src="shirt-1-yellow-cropped.png" alt="shirt-1-yellow-button" class="pbutton" id="bshirt1yellow" onclick="topButtonf3()">
 
 				</div>
 
 				<div style="border: 5px solid green; width:200px; height:400px; display:none;"  id="pantDiv">
-				  <img src="http://www.patagonia.com/dis/dw/image/v2/ABBM_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwb85953a7/images/hi-res/21970_FGE.jpg?sw=750&sh=750&sm=fit&sfrm=png" alt="W3Schools.com" style="width:50px;height:50px;">
-				  <img src="http://assets.academy.com/mgen/06/10426106.jpg?is=500,500" alt="W3Schools.com" style="width:50px;height:50px;">
+								<img src="pants-1-darkgrey-cropped.png" alt="pants-1-darkgrey-button" class="pbutton" id="bpants1dgrey" onclick="bottomButtonf1()">
+								<img src="pants-1-darkblue-cropped.png" alt="pants-1-darkblue-button" class="pbutton" id="bpants1dblue" onclick="bottomButtonf2()">
+
 				</div>
 
 				<div style="border: 5px solid blue; width:200px; height:400px; display:none;"  id="hatDiv">
@@ -235,8 +310,9 @@ th, td {
 				</div>
 
 				<div style="border: 5px solid brown; width:200px; height:400px; display:none;"  id="shoeDiv">
-				  <img src="https://s-media-cache-ak0.pinimg.com/originals/ba/ed/d0/baedd02edbbc575faed961eab41772d0.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
-				  <img src="https://s-media-cache-ak0.pinimg.com/736x/4a/fe/ab/4afeab7df54559de77d45a8fcde7841a--shoes-jordans-sneakers-shoes.jpg" alt="W3Schools.com" style="width:50px;height:50px;">
+							<img src="shoes-1-blue-cropped.png" alt="shoes-1-blue-button" class="pbutton" id="bshoes1blue" onclick="shoesButtonf1()">
+							<img src="shoes-1-green-cropped.png" alt="shoes-1-green-button" class="pbutton" id="bshoes1green" onclick="shoesButtonf2()">
+							<img src="shoes-1-grey-cropped.png" alt="shoes-1-grey-button" class="pbutton" id="bshoes1grey" onclick="shoesButtonf3()">
 
 				</div>
 	</div>
@@ -260,6 +336,9 @@ th, td {
 <script type="text/javascript">
 
 var baseA = ["pbd", "pbm", "pbl", "pbb", "pbg"];
+var topA = ["pshirt1red", "pshirt1blue", "pshirt1yellow"];
+var bottomA = ["ppants1dgrey", "ppants1dblue"];
+var shoesA = ["pshoes1blue", "pshoes1green", "pshoes1grey"];
 
 function dosomething(){
   alert("it worked");
@@ -358,25 +437,59 @@ function buttonF(varA,show){
   document.getElementById(varA[show]).style.visibility = "visible";
 }
 
-function buttonf1(){
+function baseButtonf1(){
 	buttonF(baseA,2);
 }
 
-function buttonf2(){
+function baseButtonf2(){
 	buttonF(baseA,1);
 }
 
-function buttonf3(){
+function baseButtonf3(){
 	buttonF(baseA,0);
 }
 
-function buttonf4(){
+function baseButtonf4(){
 	buttonF(baseA,3);
 }
 
-function buttonf5(){
+function baseButtonf5(){
 	buttonF(baseA,4);
 }
+
+function topButtonf1(){
+	buttonF(topA,0);
+}
+
+function topButtonf2(){
+	buttonF(topA,1);
+}
+
+function topButtonf3(){
+	buttonF(topA,2);
+}
+
+function bottomButtonf1(){
+	buttonF(bottomA,0);
+}
+
+function bottomButtonf2(){
+	buttonF(bottomA,1);
+}
+
+function shoesButtonf1(){
+	buttonF(shoesA,0);
+}
+
+function shoesButtonf2(){
+	buttonF(shoesA,1);
+}
+
+function shoesButtonf3(){
+	buttonF(shoesA,2);
+}
+
+
 
 
 // $(document).ready(function(){
