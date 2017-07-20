@@ -13,6 +13,71 @@ ul{
 	display:inline-block;
 }
 
+.buttonL {
+    background-color: #f0c497;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonM {
+    background-color: #bd7e39;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonD {
+    background-color: #422915;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonB {
+    background-color: #92b8e2;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.buttonG {
+    background-color: #66f805;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .base{
 	position: absolute;
 	margin-left: 4%;
@@ -21,6 +86,16 @@ ul{
   height:50%;
 	visibility:hidden;
   z-index: 0;
+}
+
+.baseT{
+	position: absolute;
+	margin-left: 4%;
+	margin-top: 0%;
+  display:block;
+  height:50%;
+	visibility:visible;
+  z-index: -1;
 }
 
 .hair{
@@ -39,7 +114,7 @@ ul{
 	margin-top: 0%;
   display:block;
   height:50%;
-	visibility:hidden;
+	visibility:visible;
   z-index: 6;
 }
 
@@ -218,6 +293,9 @@ th, td {
 
 <h2>Character Creator</h2>
 
+			<img src="face-dumb.png" alt="face-dumb" class="eyes" id="dumbface">
+
+			<img src="base-2-transparent.png" alt="base-2-transparent" class="baseT" id="pbt">
 			<img src="base-2-dark.png" alt="base-2-dark" class="base" id="pbd">
 			<img src="base-2-med1.png" alt="base-2-med1" class="base" id="pbm">
 			<img src="base-2-light.png" alt="base-2-light" class="base" id="pbl">
@@ -242,8 +320,8 @@ th, td {
 
 
 				<div class="dropdownB">
-				<button onclick="myFunctionB()" class="dropbtnB">Body</button>
-				  <div id="myDropdownB" class="dropdown-contentB">
+				<button onclick="myFunctionB()" class="dropbtn">Body</button>
+				  <div id="myDropdownB" class="dropdown-content">
 				    <button onclick="showskin()">Skin</button>
 				    <button onclick="showhair()">Hair</button>
 				    <button onclick="showeyes()">Eyes</button>
@@ -253,11 +331,11 @@ th, td {
 				</div>
 
 	      <div style="border: 5px solid #aaaaaa; width:200px; height:400px; display:none;"  id="skinDiv">
-					<button class="btn btn-default" name = "SB" id = "b1" onclick="baseButtonf1()" type="button">Light</button>
-					<button class="btn btn-default" name = "SB" id = "b2" onclick="baseButtonf2()" type="button">Medium</button>
-					<button class="btn btn-default" name = "SB" id = "b3" onclick="baseButtonf3()" type="button">Dark</button>
-					<button class="btn btn-default" name = "SB" id = "b4" onclick="baseButtonf4()" type="button">Blue</button>
-					<button class="btn btn-default" name = "SB" id = "b5" onclick="baseButtonf5()" type="button">Green</button>
+					<button name = "SB" id = "b1" onclick="baseButtonf1()" type="button" class="buttonL">Light</button>
+					<button name = "SB" id = "b2" onclick="baseButtonf2()" type="button" class="buttonM">Medium</button>
+					<button name = "SB" id = "b3" onclick="baseButtonf3()" type="button" class="buttonD">Dark</button>
+					<button name = "SB" id = "b4" onclick="baseButtonf4()" type="button" class="buttonB">Blue</button>
+					<button name = "SB" id = "b5" onclick="baseButtonf5()" type="button" class="buttonG">Green</button>
 				</div>
 
 				<div style="border: 5px solid #aaaaaa; width:200px; height:400px; display:none;"  id="hairDiv">
@@ -347,17 +425,17 @@ function dosomething(){
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunctionB() {
-    document.getElementById("myDropdownB").classList.toggle("showB");
+    document.getElementById("myDropdownB").classList.toggle("show");
 }
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtnB')) {
-    var dropdownsB = document.getElementsByClassName("dropdown-contentB");
-    var iB;
-    for (iB = 0; iB < dropdownsB.length; iB++) {
-      var openDropdownB = dropdownsB[iB];
-      if (openDropdownB.classList.contains('showB')) {
-        openDropdownB.classList.remove('showB');
+  if (!event.target.matches('.dropbtn')) {
+    var dropdownsB = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdownsB.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdownB.classList.contains('show')) {
+        openDropdownB.classList.remove('show');
       }
     }
   }
