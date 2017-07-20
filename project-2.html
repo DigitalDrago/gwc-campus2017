@@ -332,6 +332,9 @@ th, td {
 			<img src="shoes-1-green.png" alt="shoes-1-green" class="shoes" id="pshoes1green">
 			<img src="shoes-1-grey.png" alt="shoes-1-grey" class="shoes" id="pshoes1grey">
 
+			<div id = "myName">
+			</div>
+
 	<div style = "margin-left: 26%; margin-top: 6%; width: 211px; display: inline-block; position: absolute;">
         <!-- body-dropdown-here: base(buttons here) hair eyes nose mouth
 
@@ -423,7 +426,8 @@ th, td {
 	</div>
   <div style = "border: 5px solid #6ce7f4; margin-left: 62%; margin-top: 11%; width: 211px; height:400px; display: inline-block; position: absolute;">
     <div style = "border: 5px solid transparent; font-family: verdana; display: inline-block; position: absolute;">
-			<span style="color: #222222; font-size: 22px;"><b>Click on one of the dropdown menus and choose a category. Then click on one of the options and customize the character!</b></span>
+			<span style="color: #222222; font-size: 22px;"><b>Click on one of the dropdown menus and choose a category. Then click on one of the options and customize the character!
+			<br><br>Name your character:<input type "text" name= "baseinput" id="myText"><input type= "button" value="Submit" onclick="getTextInput()"></b></span>
 	  </div>
 	</div>
 
@@ -448,6 +452,11 @@ var shoesA = ["pshoes1blue", "pshoes1green", "pshoes1grey"];
 function dosomething(){
   alert("it worked");
 }
+
+	function getTextInput(){
+	  var input = document.getElementById("myText").value;
+	  document.getElementById("myName").innerHTML = "<br />" + "<b>"+input+"</b>";
+	}
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
