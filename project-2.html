@@ -18,6 +18,12 @@ ul{
 	display:inline-block;
 }
 
+h2 {
+    text-align: center;
+    font-family: verdana;
+    background-color: #6ce7f4;
+}
+
 .buttonL {
     background-color: #f0c497;
     border: none;
@@ -220,16 +226,8 @@ ul{
   height:20%;
 }
 
-.dropbtnB {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
 .dropbtnB:hover, .dropbtnB:focus {
-    background-color: #3e8e41;
+    background-color: #a0eff8;
 }
 .dropdownB {
     position: relative;
@@ -253,15 +251,16 @@ ul{
 .showB {display:block;}
 
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
+    background-color: #6ce7f4;
+    color: black;
+    padding: 22px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
 }
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: #a0eff8;
 }
 .dropdown {
     position: relative;
@@ -318,7 +317,7 @@ th, td {
 			<img src="shoes-1-green.png" alt="shoes-1-green" class="shoes" id="pshoes1green">
 			<img src="shoes-1-grey.png" alt="shoes-1-grey" class="shoes" id="pshoes1grey">
 
-	<div style = "margin-left: 26%; margin-top: 6%; width: 30%; display: inline-block; position: absolute;">
+	<div style = "margin-left: 26%; margin-top: 6%; width: 211px; display: inline-block; position: absolute;">
         <!-- body-dropdown-here: base(buttons here) hair eyes nose mouth
 
 		    <br> <br> <br> <br> <br> <br> clothes-dropdown-here: hat neck top hands waist bottom shoes <br> -->
@@ -335,6 +334,8 @@ th, td {
 				  </div>
 				</div>
 
+	      <div style="border: 5px solid #aaaaaa; width:200px; height:400px; display:block;"  id="adiv0">
+				</div>
 	      <div style="border: 5px solid #aaaaaa; width:200px; height:400px; display:none;"  id="skinDiv">
 					<button name = "SB" id = "b1" onclick="baseButtonf1()" type="button" class="buttonL">Light</button>
 					<button name = "SB" id = "b2" onclick="baseButtonf2()" type="button" class="buttonM">Medium</button>
@@ -361,7 +362,7 @@ th, td {
 
 				</div>
 </div>
-<div style = "margin-left: 60%; margin-top: 6%; width: 30%; display: inline-block; position: absolute;">
+<div style = "margin-left: 44%; margin-top: 6%; width: 211px; display: inline-block; position: absolute;">
 				<div class="dropdown">
 				<button onclick="myFunction()" class="dropbtn">Clothes</button>
 				  <div id="myDropdown" class="dropdown-content">
@@ -372,7 +373,8 @@ th, td {
 
 				  </div>
 				</div>
-
+        <div style="border: 5px solid #aaaaaa; width:200px; height:400px; display:block;"  id="adiv1">
+				</div>
 				<div style="border: 5px solid #aaaaaa; width:200px; height:400px; display:none;"  id="shirtDiv">
 								<img src="shirt-1-red-cropped.png" alt="shirt-1-red-button" class="pbutton" id="bshirt1red" onclick="topButtonf1()">
 								<img src="shirt-1-blue-cropped.png" alt="shirt-1-blue-button" class="pbutton" id="bshirt1blue" onclick="topButtonf2()">
@@ -445,24 +447,28 @@ function showskin() {
   document.getElementById("hairDiv").style.display="none";
   document.getElementById("eyeDiv").style.display="none";
   document.getElementById("mouthDiv").style.display="none";
+  document.getElementById("adiv0").style.display="none";
 }
 function showhair() {
   document.getElementById("skinDiv").style.display="none";
   document.getElementById("eyeDiv").style.display="none";
   document.getElementById("mouthDiv").style.display="none";
   document.getElementById("hairDiv").style.display="block";
+  document.getElementById("adiv0").style.display="none";
 }
 function showeyes() {
   document.getElementById("eyeDiv").style.display="block";
   document.getElementById("skinDiv").style.display="none";
   document.getElementById("hairDiv").style.display="none";
   document.getElementById("mouthDiv").style.display="none";
+  document.getElementById("adiv0").style.display="none";
 }
 function showmouths() {
   document.getElementById("mouthDiv").style.display="block";
   document.getElementById("skinDiv").style.display="none";
   document.getElementById("hairDiv").style.display="none";
   document.getElementById("eyeDiv").style.display="none";
+  document.getElementById("adiv0").style.display="none";
 }
 
 /* When the user clicks on the button,
@@ -488,24 +494,28 @@ function showshirts() {
   document.getElementById("hatDiv").style.display="none";
   document.getElementById("shoeDiv").style.display="none";
   document.getElementById("pantDiv").style.display="none";
+  document.getElementById("adiv1").style.display="none";
 }
 function showpants() {
   document.getElementById("shirtDiv").style.display="none";
   document.getElementById("hatDiv").style.display="none";
   document.getElementById("shoeDiv").style.display="none";
   document.getElementById("pantDiv").style.display="block";
+  document.getElementById("adiv1").style.display="none";
 }
 function showhats() {
   document.getElementById("hatDiv").style.display="block";
   document.getElementById("shirtDiv").style.display="none";
   document.getElementById("shoeDiv").style.display="none";
   document.getElementById("pantDiv").style.display="none";
+  document.getElementById("adiv1").style.display="none";
 }
 function showshoes() {
   document.getElementById("shoeDiv").style.display="block";
   document.getElementById("shirtDiv").style.display="none";
   document.getElementById("hatDiv").style.display="none";
   document.getElementById("pantDiv").style.display="none";
+  document.getElementById("adiv1").style.display="none";
 }
 
 function buttonF(varA,show){
